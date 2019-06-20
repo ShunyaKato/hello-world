@@ -1,9 +1,50 @@
-header {
-    width: 100%;
+@font-face {
+  font-family: NotoSansCJKjpRegular;
+  src: url("../fonts/NotoSansCJKjp-Regular.otf") format("opentype")
 }
 
-.snsList {
+@font-face {
+  font-family: NotoSansCJKjpBold;
+  src: url("../fonts/NotoSansCJKjp-Bold.otf") format("opentype")
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-family: NotoSansCJKjpRegular,sans-serif;
+}
+
+header {
+  width: 100%;
+  background-color: #333333;
+  height: 50px;
+  .snsList {
     float: right;
     list-style: none;
-
+    margin-right: 50px;
+    li {
+      float: left;
+      border-right: 1px solid #ffffff;
+      color: #ffffff;
+      padding: 0px 16px;
+      &:last-child{border-right: none;}
+      a {
+        color: #ffffff;
+        font-size: 12px;
+        display: block;
+        span {
+          margin-right: 5px;
+        }
+        &:hover{
+        opacity: 0.7;
+        transition: 0.2s;
+        }
+      }
+    }
+  }  
 }
+
+
