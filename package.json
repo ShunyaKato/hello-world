@@ -4,7 +4,11 @@
   "description": "shunsHomepage\r ninjawanko\r babywanko",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watchScss": "./node_modules/.bin/node-sass ./frontend/scss/style.scss ./assets/styles/style.css -w",
+    "watchBabel": "./node_modules/.bin/babel ./frontend/babel/ -w --out-dir ./assets/javascripts/",
+    "build": "./node_modules/.bin/babel ./frontend/babel/ --out-dir ./assets/javascripts/",
+    "min": "npm-run-all watch*"
   },
   "repository": {
     "type": "git",
@@ -17,6 +21,12 @@
   },
   "homepage": "https://github.com/ShunyaKato/hello-world#readme",
   "dependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
     "node-sass": "^4.12.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
   }
 }

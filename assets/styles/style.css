@@ -16,7 +16,17 @@ body {
 header {
   width: 100%;
   background-color: #333333;
-  height: 50px; }
+  height: 50px;
+  position: relative;
+  position: fixed; }
+  header .headerlogo {
+    background-color: darkred;
+    width: 60px;
+    height: 30px;
+    float: left;
+    position: absolute;
+    top: 10px;
+    left: 50px; }
   header .snsList {
     float: right;
     list-style: none;
