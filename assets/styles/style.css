@@ -11,13 +11,13 @@ a {
   text-decoration: none; }
 
 body {
-  font-family: NotoSansCJKjpRegular,sans-serif; }
+  font-family: NotoSansCJKjpRegular,sans-serif;
+  height: 2000px; }
 
 header {
   width: 100%;
   background-color: #333333;
   height: 50px;
-  position: relative;
   position: fixed; }
   header .headerlogo {
     background-color: darkred;
@@ -27,6 +27,28 @@ header {
     position: absolute;
     top: 10px;
     left: 50px; }
+  header .fadeout {
+    animation: fadeOut 1s;
+    animation-fill-mode: both; }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    display: block; }
+  100% {
+    opacity: 0;
+    display: none; } }
+  header .fadein {
+    animation: fadeIn 1s;
+    animation-fill-mode: both; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    display: none; }
+  100% {
+    opacity: 1;
+    display: block; } }
   header .snsList {
     float: right;
     list-style: none;
