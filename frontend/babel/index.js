@@ -6,7 +6,6 @@ const changePosition = 100;
 let isTop = window.pageYOffset <= changePosition ? true : false;
 
 window.onscroll = () => {
-  console.log(isTop);
   let y = window.pageYOffset;
   if (y <= changePosition) {
     if (isTop === false) {

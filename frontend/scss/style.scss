@@ -13,6 +13,14 @@ a{
   text-decoration: none;
 }
 
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
 body {
   font-family: NotoSansCJKjpRegular,sans-serif;
   height: 2000px;
@@ -86,4 +94,39 @@ header {
   }  
 }
 
-
+.menus {
+  background-color: #ffffff;
+  border-bottom: 1px solid #444444;
+  padding-top: 100px;
+  .container {
+    width: 1120px;
+    margin: 0 auto;
+    overflow: hidden;
+    .menuLogoBann {
+      overflow: hidden;
+      .logo {
+        float: left;
+        display: block;
+        width: 100px;
+      }
+      .bann {
+        float: right;
+        display: block;
+        width: 250px;
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+    } 
+    .carTypeList {
+      display: block;
+      margin: 0 auto;
+      overflow: hidden;
+      li {
+      float: left;
+      width: calc(100% / 7);
+      }
+    }
+  }
+}

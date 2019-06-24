@@ -8,7 +8,6 @@ var changePosition = 100;
 var isTop = window.pageYOffset <= changePosition ? true : false;
 
 window.onscroll = function () {
-  console.log(isTop);
   var y = window.pageYOffset;
 
   if (y <= changePosition) {
