@@ -10,6 +10,8 @@
 
 $colors: rgba(240, 36, 117, 1), rgba(242, 116, 53, 1), rgba(207, 190, 39, 1), rgba(97, 174, 36, 1), rgba(0, 161, 203, 1), rgba(1, 164, 164, 1), rgba(67, 103, 164, 1);
 
+$hoverColors: rgba(240, 36, 117, 0.6), rgba(242, 116, 53, 0.6), rgba(207, 190, 39, 0.6), rgba(97, 174, 36, 0.6), rgba(0, 161, 203, 0.6), rgba(1, 164, 164, 0.6), rgba(67, 103, 164, 0.6);
+
 a{
   color: inherit;
   text-decoration: none;
@@ -142,64 +144,53 @@ header {
       margin: 0 auto;
       display: flex;
       li {
-      width: calc(100% / 7);
-      text-align: center;
-      display: block;
-      box-sizing: border-box;
-      height: 60px;
-      line-height: 60px;
-      position: relative;
-      @each $color in $colors {
-        $i: index($colors, $color);
-        &:nth-of-type(#{$i}) {
-          border-bottom: 5px solid $color;
-          .carList {
-            background-color: $color;
+        width: calc(100% / 7);
+        text-align: center;
+        display: block;
+        box-sizing: border-box;
+        height: 60px;
+        line-height: 60px;
+        position: relative;
+        @each $color in $colors {
+          $i: index($colors, $color);
+          &:nth-of-type(#{$i}) {
+            border-bottom: 5px solid $color;
+            .carList {
+              a {
+                background-color: $color;
+              }
+            }
           }
         }
-      }
-      // &:nth-of-type(1){
-      //   border-bottom: 5px solid rgba(240, 36, 117, 1);
-      // }
-      // &:nth-of-type(2){
-      //   border-bottom: 5px solid rgba(242, 116, 53, 1);
-      // }
-      // &:nth-of-type(3){
-      //   border-bottom: 5px solid rgba(207, 190, 39, 1);
-      // }
-      // &:nth-of-type(4){
-      //   border-bottom: 5px solid rgba(97, 174, 36, 1);
-      // }
-      // &:nth-of-type(5){
-      //   border-bottom: 5px solid rgba(0, 161, 203, 1);
-      // }
-      // &:nth-of-type(6){
-      //   border-bottom: 5px solid rgba(1, 164, 164, 1);
-      // }
-      // &:nth-of-type(7){
-      //   border-bottom: 5px solid rgba(67, 103, 164, 1);
-      // }
-      &:hover {
-        border-bottom-width: 10px;
-        transition: 0.2s;
-        .carList{
-          display: block;
-          opacity: 1;
-          animation: fadeIn 0.5s, moveCarList 0.5s;
-
+        &:hover {
+          border-bottom-width: 10px;
+          transition: 0.2s;
+          .carList { 
+            display: block;
+            opacity: 1;
+            animation: fadeIn 0.5s, moveCarList 0.5s;
+          }
         }
-      }
         a {
           width: 80%;
           margin: 0 auto;
           display: block;
         }
-        .carList{
+        .carList {
           opacity: 0;
           display: none;
           position: absolute;
           width: 100%;
-
+          color: rgba(255, 255, 255, 1);
+          a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 40px;
+            &:hover {
+              opacity: 0.7;   
+            }
+          }
         }
       }
     }
