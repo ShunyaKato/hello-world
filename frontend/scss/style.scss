@@ -8,9 +8,21 @@
   src: url("../fonts/NotoSansCJKjp-Bold.otf") format("opentype")
 }
 
+$colors: rgba(240, 36, 117, 1), rgba(242, 116, 53, 1), rgba(207, 190, 39, 1), rgba(97, 174, 36, 1), rgba(0, 161, 203, 1), rgba(1, 164, 164, 1), rgba(67, 103, 164, 1);
+
+$hoverColors: rgba(240, 36, 117, 0.6), rgba(242, 116, 53, 0.6), rgba(207, 190, 39, 0.6), rgba(97, 174, 36, 0.6), rgba(0, 161, 203, 0.6), rgba(1, 164, 164, 0.6), rgba(67, 103, 164, 0.6);
+
 a{
   color: inherit;
   text-decoration: none;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
 }
 
 body {
@@ -20,18 +32,20 @@ body {
 
 header {
   width: 100%;
-  background-color: #333333;
+  background-color: rgba(51, 51, 51, 1);
   height: 50px;
   position: fixed;
   .headerlogo {
-    background-color: darkred;
+    background-color: rgba(139 , 0, 0, 1);
     width: 60px;
     height: 30px;
     float: left;
     position: absolute;
     top: 10px;
     left: 50px;
+    opacity: 0;
   }
+
   .fadeout {
     animation: fadeOut 1s;
     animation-fill-mode: both;
@@ -39,7 +53,7 @@ header {
   @keyframes fadeOut {
     0% {
       opacity: 1;
-      display: block;
+      display: block; 
     }
     100% {
       opacity: 0;
@@ -60,18 +74,29 @@ header {
       display: block;
     }
   } 
+
+  @keyframes moveCarList {
+    0% {
+      top: 70px;
+    }
+    100% {
+      //top: calc(60px+10px);
+      top: 60px;
+    }
+  }
+
   .snsList {
     float: right;
     list-style: none;
     margin-right: 50px;
     li {
       float: left;
-      border-right: 1px solid #ffffff;
-      color: #ffffff;
+      border-right: 1px solid rgba(255, 255, 255, 1);
+      color: rgba(255, 255, 255, 1);
       padding: 0px 16px;
       &:last-child{border-right: none;}
       a {
-        color: #ffffff;
+        color: rgba(255, 255, 255, 1);
         font-size: 12px;
         display: block;
         span {
@@ -86,4 +111,88 @@ header {
   }  
 }
 
-
+.menus {
+  background-color: rgba(255, 255, 255, 1);
+  border-bottom: 1px solid rgba(69, 69, 69, 0.3);
+  padding-top: 100px;
+  .container {
+    width: 1120px;
+    margin: 0 auto;
+    .menuLogoBanner {
+      overflow: hidden;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .logo {
+        float: left;
+        display: block;
+        width: 100px;
+      }
+      .banner {
+        float: right;
+        display: block;
+        width: 200px;
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+    } 
+    .carTypeList {
+      display: block;
+      margin: 0 auto;
+      display: flex;
+      li {
+        width: calc(100% / 7);
+        text-align: center;
+        display: block;
+        box-sizing: border-box;
+        height: 60px;
+        line-height: 60px;
+        position: relative;
+        @each $color in $colors {
+          $i: index($colors, $color);
+          &:nth-of-type(#{$i}) {
+            border-bottom: 5px solid $color;
+            .carList {
+              a {
+                background-color: $color;
+              }
+            }
+          }
+        }
+        &:hover {
+          border-bottom-width: 10px;
+          transition: 0.2s;
+          .carList { 
+            display: block;
+            opacity: 1;
+            animation: fadeIn 0.5s, moveCarList 0.5s;
+          }
+        }
+        a {
+          width: 80%;
+          margin: 0 auto;
+          display: block;
+        }
+        .carList {
+          opacity: 0;
+          display: none;
+          position: absolute;
+          width: 100%;
+          color: rgba(255, 255, 255, 1);
+          a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 40px;
+            &:hover {
+              opacity: 0.7;   
+            }
+          }
+        }
+      }
+    }
+  }
+}

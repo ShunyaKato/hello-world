@@ -10,6 +10,12 @@ a {
   color: inherit;
   text-decoration: none; }
 
+ul {
+  padding: 0; }
+
+li {
+  list-style-type: none; }
+
 body {
   font-family: NotoSansCJKjpRegular,sans-serif;
   height: 2000px; }
@@ -26,7 +32,8 @@ header {
     float: left;
     position: absolute;
     top: 10px;
-    left: 50px; }
+    left: 50px;
+    opacity: 0; }
   header .fadeout {
     animation: fadeOut 1s;
     animation-fill-mode: both; }
@@ -49,19 +56,25 @@ header {
   100% {
     opacity: 1;
     display: block; } }
+
+@keyframes moveCarList {
+  0% {
+    top: 70px; }
+  100% {
+    top: 60px; } }
   header .snsList {
     float: right;
     list-style: none;
     margin-right: 50px; }
     header .snsList li {
       float: left;
-      border-right: 1px solid #ffffff;
-      color: #ffffff;
+      border-right: 1px solid white;
+      color: white;
       padding: 0px 16px; }
       header .snsList li:last-child {
         border-right: none; }
       header .snsList li a {
-        color: #ffffff;
+        color: white;
         font-size: 12px;
         display: block; }
         header .snsList li a span {
@@ -69,3 +82,92 @@ header {
         header .snsList li a:hover {
           opacity: 0.7;
           transition: 0.2s; }
+
+.menus {
+  background-color: white;
+  border-bottom: 1px solid rgba(69, 69, 69, 0.3);
+  padding-top: 100px; }
+  .menus .container {
+    width: 1120px;
+    margin: 0 auto; }
+    .menus .container .menuLogoBanner {
+      overflow: hidden;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .menus .container .menuLogoBanner .logo {
+        float: left;
+        display: block;
+        width: 100px; }
+      .menus .container .menuLogoBanner .banner {
+        float: right;
+        display: block;
+        width: 200px; }
+        .menus .container .menuLogoBanner .banner img {
+          display: block;
+          width: 100%; }
+    .menus .container .carTypeList {
+      display: block;
+      margin: 0 auto;
+      display: flex; }
+      .menus .container .carTypeList li {
+        width: calc(100% / 7);
+        text-align: center;
+        display: block;
+        box-sizing: border-box;
+        height: 60px;
+        line-height: 60px;
+        position: relative; }
+        .menus .container .carTypeList li:nth-of-type(1) {
+          border-bottom: 5px solid #f02475; }
+          .menus .container .carTypeList li:nth-of-type(1) .carList a {
+            background-color: #f02475; }
+        .menus .container .carTypeList li:nth-of-type(2) {
+          border-bottom: 5px solid #f27435; }
+          .menus .container .carTypeList li:nth-of-type(2) .carList a {
+            background-color: #f27435; }
+        .menus .container .carTypeList li:nth-of-type(3) {
+          border-bottom: 5px solid #cfbe27; }
+          .menus .container .carTypeList li:nth-of-type(3) .carList a {
+            background-color: #cfbe27; }
+        .menus .container .carTypeList li:nth-of-type(4) {
+          border-bottom: 5px solid #61ae24; }
+          .menus .container .carTypeList li:nth-of-type(4) .carList a {
+            background-color: #61ae24; }
+        .menus .container .carTypeList li:nth-of-type(5) {
+          border-bottom: 5px solid #00a1cb; }
+          .menus .container .carTypeList li:nth-of-type(5) .carList a {
+            background-color: #00a1cb; }
+        .menus .container .carTypeList li:nth-of-type(6) {
+          border-bottom: 5px solid #01a4a4; }
+          .menus .container .carTypeList li:nth-of-type(6) .carList a {
+            background-color: #01a4a4; }
+        .menus .container .carTypeList li:nth-of-type(7) {
+          border-bottom: 5px solid #4367a4; }
+          .menus .container .carTypeList li:nth-of-type(7) .carList a {
+            background-color: #4367a4; }
+        .menus .container .carTypeList li:hover {
+          border-bottom-width: 10px;
+          transition: 0.2s; }
+          .menus .container .carTypeList li:hover .carList {
+            display: block;
+            opacity: 1;
+            animation: fadeIn 0.5s, moveCarList 0.5s; }
+        .menus .container .carTypeList li a {
+          width: 80%;
+          margin: 0 auto;
+          display: block; }
+        .menus .container .carTypeList li .carList {
+          opacity: 0;
+          display: none;
+          position: absolute;
+          width: 100%;
+          color: white; }
+          .menus .container .carTypeList li .carList a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 40px; }
+            .menus .container .carTypeList li .carList a:hover {
+              opacity: 0.7; }

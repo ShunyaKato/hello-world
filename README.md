@@ -9,5 +9,8 @@ babywanko
 ## How to babel compile ##
 .\\node_modules\\.bin\\babel src --out-dir dist
 
-## How to scss & babel ##
-npm run watchBabel "&" watchScss
+## How to scss ##
+npm run watchScss
+
+## How to babel ##
+npm run watchBabel
