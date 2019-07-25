@@ -20,11 +20,16 @@ body {
   font-family: NotoSansCJKjpRegular,sans-serif;
   height: 2000px; }
 
+.container {
+  width: 1120px;
+  margin: 0 auto; }
+
 header {
   width: 100%;
   background-color: #333333;
   height: 50px;
-  position: fixed; }
+  position: fixed;
+  z-index: 2000; }
   header .headerlogo {
     background-color: darkred;
     width: 60px;
@@ -87,87 +92,117 @@ header {
   background-color: white;
   border-bottom: 1px solid rgba(69, 69, 69, 0.3);
   padding-top: 100px; }
-  .menus .container {
-    width: 1120px;
-    margin: 0 auto; }
-    .menus .container .menuLogoBanner {
-      overflow: hidden;
-      display: -webkit-flex;
-      display: flex;
-      align-items: center;
-      justify-content: space-between; }
-      .menus .container .menuLogoBanner .logo {
-        float: left;
-        display: block;
-        width: 100px; }
-      .menus .container .menuLogoBanner .banner {
-        float: right;
-        display: block;
-        width: 200px; }
-        .menus .container .menuLogoBanner .banner img {
-          display: block;
-          width: 100%; }
-    .menus .container .carTypeList {
+  .menus .menuLogoBanner {
+    overflow: hidden;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .menus .menuLogoBanner .logo {
+      float: left;
       display: block;
-      margin: 0 auto;
-      display: flex; }
-      .menus .container .carTypeList li {
-        width: calc(100% / 7);
-        text-align: center;
+      width: 100px; }
+    .menus .menuLogoBanner .banner {
+      float: right;
+      display: block;
+      width: 200px; }
+      .menus .menuLogoBanner .banner img {
         display: block;
-        box-sizing: border-box;
-        height: 60px;
-        line-height: 60px;
-        position: relative; }
-        .menus .container .carTypeList li:nth-of-type(1) {
-          border-bottom: 5px solid #f02475; }
-          .menus .container .carTypeList li:nth-of-type(1) .carList a {
-            background-color: #f02475; }
-        .menus .container .carTypeList li:nth-of-type(2) {
-          border-bottom: 5px solid #f27435; }
-          .menus .container .carTypeList li:nth-of-type(2) .carList a {
-            background-color: #f27435; }
-        .menus .container .carTypeList li:nth-of-type(3) {
-          border-bottom: 5px solid #cfbe27; }
-          .menus .container .carTypeList li:nth-of-type(3) .carList a {
-            background-color: #cfbe27; }
-        .menus .container .carTypeList li:nth-of-type(4) {
-          border-bottom: 5px solid #61ae24; }
-          .menus .container .carTypeList li:nth-of-type(4) .carList a {
-            background-color: #61ae24; }
-        .menus .container .carTypeList li:nth-of-type(5) {
-          border-bottom: 5px solid #00a1cb; }
-          .menus .container .carTypeList li:nth-of-type(5) .carList a {
-            background-color: #00a1cb; }
-        .menus .container .carTypeList li:nth-of-type(6) {
-          border-bottom: 5px solid #01a4a4; }
-          .menus .container .carTypeList li:nth-of-type(6) .carList a {
-            background-color: #01a4a4; }
-        .menus .container .carTypeList li:nth-of-type(7) {
-          border-bottom: 5px solid #4367a4; }
-          .menus .container .carTypeList li:nth-of-type(7) .carList a {
-            background-color: #4367a4; }
-        .menus .container .carTypeList li:hover {
-          border-bottom-width: 10px;
-          transition: 0.2s; }
-          .menus .container .carTypeList li:hover .carList {
-            display: block;
-            opacity: 1;
-            animation: fadeIn 0.5s, moveCarList 0.5s; }
-        .menus .container .carTypeList li a {
-          width: 80%;
-          margin: 0 auto;
-          display: block; }
-        .menus .container .carTypeList li .carList {
-          opacity: 0;
-          display: none;
-          position: absolute;
+        width: 100%; }
+  .menus .carTypeList {
+    display: block;
+    margin: 0 auto;
+    display: flex; }
+    .menus .carTypeList li {
+      width: calc(100% / 7);
+      text-align: center;
+      display: block;
+      box-sizing: border-box;
+      height: 60px;
+      line-height: 60px;
+      position: relative; }
+      .menus .carTypeList li:nth-of-type(1) {
+        border-bottom: 5px solid #f02475; }
+        .menus .carTypeList li:nth-of-type(1) .carList a {
+          background-color: #f02475; }
+      .menus .carTypeList li:nth-of-type(2) {
+        border-bottom: 5px solid #f27435; }
+        .menus .carTypeList li:nth-of-type(2) .carList a {
+          background-color: #f27435; }
+      .menus .carTypeList li:nth-of-type(3) {
+        border-bottom: 5px solid #cfbe27; }
+        .menus .carTypeList li:nth-of-type(3) .carList a {
+          background-color: #cfbe27; }
+      .menus .carTypeList li:nth-of-type(4) {
+        border-bottom: 5px solid #61ae24; }
+        .menus .carTypeList li:nth-of-type(4) .carList a {
+          background-color: #61ae24; }
+      .menus .carTypeList li:nth-of-type(5) {
+        border-bottom: 5px solid #00a1cb; }
+        .menus .carTypeList li:nth-of-type(5) .carList a {
+          background-color: #00a1cb; }
+      .menus .carTypeList li:nth-of-type(6) {
+        border-bottom: 5px solid #01a4a4; }
+        .menus .carTypeList li:nth-of-type(6) .carList a {
+          background-color: #01a4a4; }
+      .menus .carTypeList li:nth-of-type(7) {
+        border-bottom: 5px solid #4367a4; }
+        .menus .carTypeList li:nth-of-type(7) .carList a {
+          background-color: #4367a4; }
+      .menus .carTypeList li:hover {
+        border-bottom-width: 10px;
+        transition: 0.2s; }
+        .menus .carTypeList li:hover .carList {
+          display: block;
+          opacity: 1;
+          animation: fadeIn 0.5s, moveCarList 0.5s; }
+      .menus .carTypeList li a {
+        width: 80%;
+        margin: 0 auto;
+        display: block; }
+      .menus .carTypeList li .carList {
+        opacity: 0;
+        display: none;
+        position: absolute;
+        width: 100%;
+        color: white; }
+        .menus .carTypeList li .carList a {
+          display: block;
           width: 100%;
-          color: white; }
-          .menus .container .carTypeList li .carList a {
-            display: block;
-            width: 100%;
-            height: 100%;
-            line-height: 40px; }
-            .menus .container .carTypeList li .carList a:hover {
-              opacity: 0.7; }
+          height: 100%;
+          line-height: 40px; }
+          .menus .carTypeList li .carList a:hover {
+            opacity: 0.7; }
+
+.mainContent {
+  background-color: #f1f1f1; }
+  .mainContent .content {
+    padding-top: 100px;
+    width: 750px;
+    float: left; }
+    .mainContent .content .airticle {
+      border: 1px solid #dadada;
+      height: 362px;
+      margin-bottom: 16px;
+      padding: 30px 20px 20px 20px; }
+      .mainContent .content .airticle h1 {
+        width: 708px;
+        padding-bottom: 15px;
+        margin-bottom: 2px;
+        border-bottom: 2px solid rgba(68, 68, 68, 0.2); }
+        .mainContent .content .airticle h1 a {
+          font-family: 'Hiragino Kaku Gothic ProN';
+          font-size: 18px;
+          color: #3c3c3c; }
+      .mainContent .content .airticle .airticleMain {
+        margin: 40px 0px; }
+        .mainContent .content .airticle .airticleMain img {
+          display: block;
+          width: 300px;
+          height: 168.75px;
+          float: left; }
+        .mainContent .content .airticle .airticleMain p {
+          font-family: 'Hiragino Kaku Gothic ProN';
+          font-size: 15px;
+          color: #3c3c3c;
+          margin: 0px; }

@@ -1,0 +1,29 @@
+HELLO-WORLD
+ |--assets
+ |  |--fonts
+ |  |  |--NotoSansCJKjp-Black.otf
+ |  |  |--NotoSansCJKjp-Bold.otf
+ |  |  |--NotoSansCJKjp-Regular.otf
+ |  |--imgs
+ |  |  |--bosyuchu.png
+ |  |  |--logo.png
+ |  |--javascripts
+ |  |  |--index.js
+ |  |--styles
+ |  |  |--style.css
+ |--frontend
+ |  |--babel
+ |  |  |--index.js
+ |  |--scss
+ |  |  |--stule.scss
+ |  |--node_modules
+ |  |  |
+ |     ~
+ |--.gitignore
+ |--babel.config.js
+ |--debug.log
+ |--directoryStructure
+ |--index.html
+ |--package-lock.json
+ |--package.json
+ |--README.md

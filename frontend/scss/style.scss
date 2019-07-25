@@ -30,11 +30,17 @@ body {
   height: 2000px;
 }
 
+.container {
+  width: 1120px;
+  margin: 0 auto;
+}
+
 header {
   width: 100%;
   background-color: rgba(51, 51, 51, 1);
   height: 50px;
   position: fixed;
+  z-index: 2000;
   .headerlogo {
     background-color: rgba(139 , 0, 0, 1);
     width: 60px;
@@ -115,9 +121,9 @@ header {
   background-color: rgba(255, 255, 255, 1);
   border-bottom: 1px solid rgba(69, 69, 69, 0.3);
   padding-top: 100px;
-  .container {
-    width: 1120px;
-    margin: 0 auto;
+  // .container {
+    // width: 1120px;
+    // margin: 0 auto;
     .menuLogoBanner {
       overflow: hidden;
       display: -webkit-flex;
@@ -191,6 +197,47 @@ header {
               opacity: 0.7;   
             }
           }
+        }
+      }
+    }
+  // }
+}
+
+.mainContent {
+  background-color: rgba(241, 241, 241, 1);
+  .content {
+    padding-top: 100px;
+    width: 750px;
+    float: left;
+    .airticle {
+      border: 1px solid rgba(218, 218, 218, 1);
+      height: 362px;
+      margin-bottom: 16px;
+      padding: 30px 20px 20px 20px;
+      h1 {
+        width:708px;
+        padding-bottom: 15px;
+        margin-bottom: 2px;
+        border-bottom: 2px solid rgba(68, 68, 68, 0.2);
+        a {
+          font-family: 'Hiragino Kaku Gothic ProN';
+          font-size: 18px;
+          color: rgba(60, 60, 60, 1);
+        }
+      }
+      .airticleMain {
+        margin: 40px 0px;
+        img {
+          display: block;
+          width: 300px;
+          height: 168.75px;
+         float: left;
+        }
+        p{
+          font-family: 'Hiragino Kaku Gothic ProN';
+          font-size: 15px;
+          color: rgba(60, 60, 60, 1);
+          margin: 0px;
         }
       }
     }
