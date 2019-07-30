@@ -175,34 +175,112 @@ header {
             opacity: 0.7; }
 
 .mainContent {
-  background-color: #f1f1f1; }
-  .mainContent .content {
-    padding-top: 100px;
+  background-color: #f1f1f1;
+  height: 1000px; }
+  .mainContent .contents {
+    padding-top: 20px;
     width: 750px;
     float: left; }
-    .mainContent .content .airticle {
+    .mainContent .contents .airticle {
       border: 1px solid #dadada;
       height: 362px;
       margin-bottom: 16px;
-      padding: 30px 20px 20px 20px; }
-      .mainContent .content .airticle h1 {
+      padding: 30px 20px 20px 20px;
+      background-color: white; }
+      .mainContent .contents .airticle h1 {
         width: 708px;
         padding-bottom: 15px;
         margin-bottom: 2px;
+        margin-top: 0px;
         border-bottom: 2px solid rgba(68, 68, 68, 0.2); }
-        .mainContent .content .airticle h1 a {
+        .mainContent .contents .airticle h1 a {
           font-family: 'Hiragino Kaku Gothic ProN';
           font-size: 18px;
           color: #3c3c3c; }
-      .mainContent .content .airticle .airticleMain {
+      .mainContent .contents .airticle .airticleMain {
         margin: 40px 0px; }
-        .mainContent .content .airticle .airticleMain img {
+        .mainContent .contents .airticle .airticleMain img {
           display: block;
           width: 300px;
           height: 168.75px;
           float: left; }
-        .mainContent .content .airticle .airticleMain p {
+        .mainContent .contents .airticle .airticleMain p {
           font-family: 'Hiragino Kaku Gothic ProN';
           font-size: 15px;
           color: #3c3c3c;
           margin: 0px; }
+  .mainContent .sideBar {
+    float: right;
+    width: 338px;
+    padding-top: 20px; }
+    .mainContent .sideBar .sideBarTitle {
+      margin: 0px;
+      padding: 15px 19px;
+      background-color: #444444;
+      line-height: 1; }
+      .mainContent .sideBar .sideBarTitle span {
+        color: white;
+        font-family: 'Hiragino Kaku Gothic ProN';
+        font-size: 14px; }
+    .mainContent .sideBar form {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 20px; }
+      .mainContent .sideBar form .searchField {
+        width: 91%;
+        border-width: 1px; }
+      .mainContent .sideBar form button {
+        border-width: opx; }
+    .mainContent .sideBar .snsList {
+      list-style: none;
+      background-color: white;
+      margin: 0px;
+      padding: 5px 19px; }
+      .mainContent .sideBar .snsList li {
+        color: #444444; }
+        .mainContent .sideBar .snsList li a {
+          color: #444444;
+          display: block;
+          font-family: 'arial';
+          font-size: 14px;
+          line-height: 33px; }
+          .mainContent .sideBar .snsList li a .iconSize {
+            font-size: 16px; }
+          .mainContent .sideBar .snsList li a span {
+            width: 18px;
+            margin-right: 10px; }
+          .mainContent .sideBar .snsList li a:hover {
+            margin-left: 7px;
+            transition: 0.2s; }
+
+footer {
+  background-color: #444444; }
+  footer .footerContents {
+    display: flex;
+    flex-direction: row; }
+    footer .footerContents .content {
+      width: 25%;
+      color: white; }
+      footer .footerContents .content .footerTitle {
+        font-family: 'arial';
+        font-size: 16px;
+        font-weight: bold;
+        padding-top: 10px; }
+      footer .footerContents .content .footerList {
+        font-family: 'arial';
+        font-size: 12px;
+        padding-top: 10px; }
+        footer .footerContents .content .footerList span:hover {
+          border-bottom: 1px solid white; }
+  footer .footerMenues ul {
+    display: flex;
+    flex-direction: row; }
+    footer .footerMenues ul li {
+      margin: 0px 30px 0px 0px;
+      padding-bottom: 10px; }
+      footer .footerMenues ul li span {
+        font-family: 'arial';
+        font-size: 12px;
+        color: white; }
+        footer .footerMenues ul li span:hover {
+          border-bottom: 1px solid white; }
